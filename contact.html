@@ -39,9 +39,21 @@
               <textarea name="message"></textarea>
             </label>
             <!-- your other form fields go here -->
+            <label for="city">Ville :</label>
+            <input type="text" id="city" name="city"><br>
+        
+            <label for="region">Région :</label>
+            <input type="text" id="region" name="region"><br>
+        
+            <label for="country">Pays :</label>
+            <input type="text" id="country" name="country"><br>
+        
+            <button type="button" onclick="getLocation()">Utiliser ma position</button>
             <button type="submit">Send</button>
           </form>
         </section>
     </main>
+    
+    <script src="contact.js"></script>
 </body>
 </html>
