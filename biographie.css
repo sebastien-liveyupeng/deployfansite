@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+   background-color: rgb(5, 0, 0);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url("imagin.jpg");
+}
+
+.box_para {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.box_para > div {
+           
+    color: #000;                       
+    margin: 1em 0;                    
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 100%;                       
+}
+
+
+.box_para h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .box_para > div {
+        padding: 1em;
+    }
+}
+
+.box .para {
+    width: 200px; 
+    height: 200px;
+}
+p{
+    color: aliceblue;
+}
+.para1 {
+    background-color: aliceblue;
+    margin-left: 250px;
+    padding: 10px; 
+    border: 1px solid #f8f4f4; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+.para2 {
+    margin-left: 250px;
+    padding: 10px; 
+    border: 1px solid #f8f4f4; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: rgb(45, 43, 43); 
+    color: white; 
+}
+
+.para3 {
+    background-color: aliceblue;
+    margin-left: 250px;
+    padding: 10px; 
+    border: 1px solid #f8f4f4; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+.para4 {
+    margin-left: 250px;
+    padding: 10px; 
+    border: 1px solid #f8f4f4; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: rgb(45, 43, 43); 
+    color: white;
+}
+.bio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #f4f4f8;
+    text-shadow: 0px 0px 10px cyan,
+                 0px 0px 20px cyan,
+                 0px 0px 40px cyan,
+                 0px 0px 60px cyan;
+    color: #f8f4f4;
+}
