@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #0b0c0c 50%, #f4f4f8 50%);
+    background:black;
     height: 100vh;
     display: flex;
     flex-direction: column;

@@ -8,7 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     color: #333;
-    background: linear-gradient(135deg, #000909 50%, #f8f8fb 50%);
+    background: black;
     line-height: 1.6;
 }
 
@@ -16,7 +16,7 @@ body {
 header {
     text-align: center;
     padding: 1.5em;
-    background: linear-gradient(135deg, #f4f7f7 50%, #000008 50%);
+    background: rgb(18, 16, 16);
     color: #fff;        
   }
 
