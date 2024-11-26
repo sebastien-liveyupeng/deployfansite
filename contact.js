@@ -1,31 +1,24 @@
-function getLocationAndSubmit() {
+function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(processPosition, showError);
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
         alert("La géolocalisation n'est pas supportée par ce navigateur.");
     }
 }
 
-function processPosition(position) {
+function showPosition(position) {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
 
-    // Utilisation de l'API OpenStreetMap Nominatim pour le géocodage (gratuit)
-    const geocodeUrl = `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`;
-
-    fetch(geocodeUrl)
+    // Appel à une API de géocodage pour convertir latitude et longitude en adresse
+    fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`)
         .then(response => response.json())
         .then(data => {
-            const address = data.display_name || "Adresse non disponible";
-            document.getElementById("address").value = address;
-
-            // Soumettre le formulaire après avoir rempli l'adresse
-            document.getElementById("contactForm").submit();
+            document.getElementById("city").value = data.address.city || "";
+            document.getElementById("region").value = data.address.state || "";
+            document.getElementById("country").value = data.address.country || "";
         })
-        .catch(error => {
-            console.error("Erreur lors de la récupération de l'adresse:", error);
-            alert("Impossible de récupérer l'adresse.");
-        });
+        .catch(error => console.log("Erreur de géocodage:", error));
 }
 
 function showError(error) {
